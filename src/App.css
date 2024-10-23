@@ -1,0 +1,204 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f0f0; /* This is your desired background color */
+}
+
+.App {
+  min-height: 100vh; /* Ensure it takes at least full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, forestgreen 30%, #1DB954 100%); /* Apply background color to cover the entire App area */
+}
+
+/* General layout styles */
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  }
+
+.tracks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Top navigation bar */
+  .top-nav {
+    width: 100%;
+    background-color: #191414;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .nav-toggle {
+    background-color: #191414;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .nav-toggle:hover {
+    background-color: #1DB954;
+  }
+  
+  /* Side nav styles */
+  .side-nav {
+    position: fixed;
+    top: 60px; /* Below the top nav bar */
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: calc(100% - 60px); /* Full height, minus the top bar */
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .side-nav.visible {
+    left: 0; /* Slide in from the left */
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    background-color: #1DB954;
+    color: black;
+  }
+
+  .header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .logout-button {
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .logout-button:hover {
+    background-color: #21a1f1;
+  }
+
+  
+  /* Artists and songs styles */
+  .artists-list, .songs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .artist, .song {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+
+/* Time range button styles */
+.time-range-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Spacing above and below the buttons */
+  }
+
+/* Active button styles */
+.time-range-buttons button.active {
+    background-color: forestgreen; /* Change color when active */
+    color: white; /* Text color when active */
+    border: 1px solid forestgreen; /* Add border if needed */
+  }
+  
+  .time-range-buttons button {
+    background-color: #1DB954;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .time-range-buttons button:hover {
+    background-color: forestgreen; /* Hover color */
+  }
+  
+.Artist-Song {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App.css */
+
+/* Image styles for artists and songs */
+.artist img,
+.song img {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  border-radius: 50%; /* Round images for artists */
+  object-fit: cover; /* Maintain aspect ratio and cover the box */
+}
+
+.songs-list img {
+  border-radius: 0; /* No rounding for song images */
+}
+
+.song.playing {
+  background-color: #21a1f1;
+  color: white;
+}
+
+.song {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.song:hover {
+  background-color: #f0f0f0;
+}
+
+.song:active {
+  background-color: #f0f0f0;
+}
