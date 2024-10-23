@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   const CLIENT_ID = "47331cd847784cd38b8610a61edc8cb8";
-  const REDIRECT_URI = "https://wapped365-4z15yv5w3-ravjeet05s-projects.vercel.app";
+  const REDIRECT_URI = "https://wapped365.vercel.app";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
   const SCOPE = "user-top-read";
