@@ -1,10 +1,10 @@
-Wrapped365 🎵
+Rewind365 🎵
 
 Your Spotify Wrapped, anytime you want it.
 
 Are you a Spotify music lover? If so, you probably look forward to Spotify Wrapped every year—a personalized recap of your top songs, artists, and genres. But why wait until the end of the year?
 
-With Wrapped365, you can access your Spotify listening trends at any time. Whether you’re curious about the songs you’ve been obsessing over lately or want to know your most-played artist during a specific time frame, Wrapped365 has you covered.
+With Rewind365, you can access your Spotify listening trends at any time. Whether you’re curious about the songs you’ve been obsessing over lately or want to know your most-played artist during a specific time frame, Rewind365 has you covered.
 
 🚀 Features
 
@@ -17,6 +17,6 @@ With Wrapped365, you can access your Spotify listening trends at any time. Wheth
   Frontend: React.js for a dynamic and responsive user experience.
   Spotify API: Seamless integration with Spotify's Web API for real-time data retrieval.
 
-🌟 Why Wrapped365?
+🌟 Why Rewind365?
 
-Spotify Wrapped is one of the platform's trendiest features, but it’s limited to a single release each December. Wrapped365 breaks this barrier, giving you the freedom to check your listening trends whenever you like. Stay connected to your music, your way.
+Spotify Wrapped is one of the platform's trendiest features, but it’s limited to a single release each December. Rewind365 breaks this barrier, giving you the freedom to check your listening trends whenever you like. Stay connected to your music, your way.
