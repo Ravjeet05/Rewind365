@@ -1,0 +1,46 @@
+/* Privacy Policy & Terms Page Styles */
+.legal-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 2rem;
+    background-color: var(--medium-gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--white);
+  }
+  
+  .legal-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .legal-page h2 {
+    font-size: 1.5rem;
+    color: var(--light-gray);
+    margin-top: 1.5rem;
+  }
+  
+  .legal-page p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--white);
+  }
+  
+  .legal-page a {
+    color: var(--spotify-green);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .legal-page a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .legal-page {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  }

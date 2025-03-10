@@ -1,204 +1,362 @@
-/* App.css */
+/* Updated App.css */
+
+:root {
+  --spotify-black: #121212;
+  --spotify-green: #1DB954;
+  --dark-gray: #181818;
+  --medium-gray: #282828;
+  --light-gray: #b3b3b3;
+  --white: #ffffff;
+}
 
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #f0f0f0; /* This is your desired background color */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--spotify-black);
+  color: var(--white);
 }
 
 .App {
-  min-height: 100vh; /* Ensure it takes at least full screen height */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--spotify-black);
+}
+
+/* Authentication Container */
+.auth-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(180deg, forestgreen 30%, #1DB954 100%); /* Apply background color to cover the entire App area */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* General layout styles */
-.main-container {
-  width: 100%;
+.spotify-login {
+  background-color: var(--spotify-green);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spotify-login:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(29, 185, 84, 0.5);
+}
+
+/* Main Content Layout */
+.app-container {
   display: flex;
   flex-direction: column;
-  }
-
-.tracks {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
 }
 
-.header {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.app-header {
+  background-color: var(--medium-gray);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-  /* Top navigation bar */
-  .top-nav {
-    width: 100%;
-    background-color: #191414;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 10px;
-  }
-  
-  .nav-toggle {
-    background-color: #191414;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-  
-  .nav-toggle:hover {
-    background-color: #1DB954;
-  }
-  
-  /* Side nav styles */
-  .side-nav {
-    position: fixed;
-    top: 60px; /* Below the top nav bar */
-    left: -250px; /* Start off-screen */
-    width: 250px;
-    height: calc(100% - 60px); /* Full height, minus the top bar */
-    background-color: #282c34;
-    display: flex;
+/* Navigation Toggle */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Side Navigation */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  width: 260px;
+  margin-top: 27px;
+  background-color: var(--medium-gray);
+  transition: all 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 99;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.side-nav.visible {
+  left: 0;
+}
+
+.nav-link {
+  color: var(--light-gray);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--white);
+  background-color: var(--dark-gray);
+  padding-left: 2.5rem;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: var(--spotify-green);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #18a74e;
+  transform: scale(1.05);
+}
+
+/* Content Area */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Cards */
+.artist-card, .song-card {
+  background-color: var(--medium-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover, .song-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.artist-image, .song-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border: 2px solid var(--spotify-green);
+}
+
+.song-image {
+  border-radius: 5px;
+}
+
+/* Time Range Buttons */
+.time-range-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.time-range-buttons button {
+  background: none;
+  border: 1.5px solid var(--light-gray);
+  color: var(--light-gray);
+  padding: 0.6rem 1.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.time-range-buttons button:hover {
+  border-color: var(--spotify-green);
+  color: var(--spotify-green);
+}
+
+.time-range-buttons button.active {
+  background-color: var(--spotify-green);
+  border-color: var(--spotify-green);
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Typography */
+h1, h2, h3 {
+  margin: 0 0 1.2rem 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--light-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .artist-card, .song-card {
     flex-direction: column;
-    padding-top: 20px;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .side-nav.visible {
-    left: 0; /* Slide in from the left */
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
-  }
-  
-  .nav-link:hover {
-    background-color: #1DB954;
-    color: black;
+    text-align: center;
+    padding: 1.2rem;
   }
 
-  .header-title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .logout-button {
-    background-color: #fff;
-    border: none;
-    color: black;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .logout-button:hover {
-    background-color: #21a1f1;
+  .artist-image, .song-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 
-  
-  /* Artists and songs styles */
-  .artists-list, .songs-list {
-    display: flex;
+  .time-range-buttons {
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .artist, .song {
-    width: 200px;
-    margin: 20px;
-    text-align: center;
   }
 
-/* Time range button styles */
-.time-range-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Spacing above and below the buttons */
+  .side-nav {
+    width: 100%;
+    left: -100%;
   }
 
-/* Active button styles */
-.time-range-buttons button.active {
-    background-color: forestgreen; /* Change color when active */
-    color: white; /* Text color when active */
-    border: 1px solid forestgreen; /* Add border if needed */
+  .side-nav.visible {
+    left: 0;
   }
-  
-  .time-range-buttons button {
-    background-color: #1DB954;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+}
+
+/* Loading State */
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: var(--light-gray);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Error Messages */
+.error-message {
+  color: #ff4d4d;
+  background-color: rgba(255, 77, 77, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
   }
-  
-  .time-range-buttons button:hover {
-    background-color: forestgreen; /* Hover color */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-.Artist-Song {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* App.css */
-
-/* Image styles for artists and songs */
-.artist img,
-.song img {
-  width: 100px; /* Set a fixed width */
-  height: 100px; /* Set a fixed height */
-  border-radius: 50%; /* Round images for artists */
-  object-fit: cover; /* Maintain aspect ratio and cover the box */
+/* Spotify Branding */
+.spotify-branding {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.songs-list img {
-  border-radius: 0; /* No rounding for song images */
+.spotify-logo {
+  width: 120px;
+  margin-bottom: 0.5rem;
 }
 
-.song.playing {
-  background-color: #21a1f1;
-  color: white;
+.spotify-branding p a {
+  color: var(--spotify-green);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.song {
-  cursor: pointer;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.spotify-branding p a:hover {
+  text-decoration: underline;
 }
 
-.song:hover {
-  background-color: #f0f0f0;
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--light-gray);
 }
 
-.song:active {
-  background-color: #f0f0f0;
+.footer a {
+  color: var(--spotify-green);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Privacy Policy & Terms Page Styles */
+.legal-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: var(--medium-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+}
+
+.legal-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page h2 {
+  font-size: 1.5rem;
+  color: var(--light-gray);
+  margin-top: 1.5rem;
+}
+
+.legal-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.legal-page a {
+  color: var(--spotify-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.legal-page a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 1.5rem;
+    width: 90%;
+  }
 }
