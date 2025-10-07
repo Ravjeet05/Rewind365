@@ -1,3 +1,7 @@
+
+
+Note: Due to recent Spotify API policy changes, public user authentication is now limited. As a result, only whitelisted users can log in for live demos.
+
 Rewind365 🎵
 
 Your Spotify Wrapped, anytime you want it.
