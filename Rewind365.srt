@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:05,000
+Hi, I’m Ravjeet Chahal. This is Rewind365 — your personalized Spotify Wrapped anytime.
+
+2
+00:00:05,000 --> 00:00:15,000
+Dashboard shows your top artists, songs, and listening stats with interactive charts.
+
+3
+00:00:15,000 --> 00:00:25,000
+Built with React and Spotify Web API for real-time music data and clean design.
+
+4
+00:00:25,000 --> 00:00:40,000
+Log in with Spotify, pick a time frame, and see your data appear instantly.
+
+5
+00:00:40,000 --> 00:00:55,000
+Spotify limited public logins, so I redesigned the flow for whitelisted users and added this demo.
+
+6
+00:00:55,000 --> 00:01:05,000
+Modular codebase, responsive layout, and smooth API handling for better user experience.
+
+7
+00:01:05,000 --> 00:01:15,000
+Rewind365 combines data and design to make your listening habits visual and personal.
+
+8
+00:01:15,000 --> 00:01:20,000
+See more at github.com/Ravjeet05/Rewind365
