@@ -1,6 +1,17 @@
+# Rewind365
 
+Rewind365 is a Spotify Wrapped–style web app that lets users view their top artists, songs, and listening stats anytime through clean, interactive visuals.
 
-Note: Due to recent Spotify API policy changes, public user authentication is now limited. As a result, only whitelisted users can log in for live demos.
+---
+
+## 🎥 Demo
+
+[![Watch the Demo](https://img.shields.io/badge/Watch-Video-blue)](https://youtu.be/W89BPp7O0dA)
+
+**Note:** Due to recent Spotify API policy changes, only whitelisted users can log in for live demos.  
+The demo video shows full functionality using approved credentials.
+
+---
 
 Rewind365 🎵
 
@@ -20,6 +31,14 @@ With Rewind365, you can access your Spotify listening trends at any time. Whethe
 
   Frontend: React.js for a dynamic and responsive user experience.
   Spotify API: Seamless integration with Spotify's Web API for real-time data retrieval.
+
+  
+🧩 Architecture
+  Client (React)
+   │
+   ├── Auth → Spotify Authorization API
+   │
+   └── Data Fetch → Spotify Web API → Visualization (Charts)
 
 🌟 Why Rewind365?
 
