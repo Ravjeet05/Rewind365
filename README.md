@@ -17,7 +17,7 @@ Rewind365 🎵
 
 Your Spotify Wrapped, anytime you want it.
 
-Are you a Spotify music lover? If so, you probably look forward to Spotify Wrapped every year—a personalized recap of your top songs, artists, and genres. But why wait until the end of the year?
+Are you a Spotify music lover? If so, you probably look forward to Spotify Wrapped every year, a personalized recap of your top songs, artists, and genres. But why wait until the end of the year?
 
 With Rewind365, you can access your Spotify listening trends at any time. Whether you’re curious about the songs you’ve been obsessing over lately or want to know your most-played artist during a specific time frame, Rewind365 has you covered.
 
